@@ -18,6 +18,8 @@ $(document).ready(function(){
   //////////////////////////////////////////////////////////////////
 
   // Seu código abaixo
+  //
+  // Seu código acima
 
 })
 
@@ -26,6 +28,8 @@ let boxReferencia = document.getElementById("box-auxilio2");
 let tamanhoBox = [];
 var n = 0;
 
+// tamanhoBox.push(box.clientHeight)
+
 function nextBtn(){
   if(n >= 0 && n <= 11){
     n += 1;
@@ -33,7 +37,7 @@ function nextBtn(){
     boxReferenciaTamanho(n);
 
     if(tamanhoBox.length < 11 && tamanhoBox[n-1] == undefined){
-      tamanhoBox.push(box.clientHeight)
+      tamanhoBox.push(box.clientHeight);
     }
   }
 }
@@ -180,6 +184,7 @@ let infoBox = [
   function boxReferenciaTamanho(n){
     if(n >= 0 && n <= 10){
 
+      // boxReferencia.children[0].children[0].children[0].src = infoBox[n+1][0];
       boxReferencia.children[0].children[1].children[0].innerHTML = `<strong style="text-transform: uppercase;">${infoBox[n+1][1]}</strong>`;
       boxReferencia.children[0].children[1].children[1].innerHTML = infoBox[n+1][2];
       boxReferencia.children[1].innerHTML = "Exemplos";
@@ -193,9 +198,11 @@ let infoBox = [
       boxReferencia.children[1].innerHTML = "Exemplos";
       boxReferencia.children[2].innerHTML = infoBox[11][4];
     }
+    else{console.log("saiu")}
   }
 
 
+  // teste de animação
   function changeText() {
     let paragraph = document.querySelectorAll('.paragraph');
     paragraph.forEach(element => {
@@ -212,9 +219,10 @@ let infoBox = [
     
     // Força o navegador a recalcular a altura
     box.style.height = 'auto';
-    //
-    const newHeight = box.offsetHeight;
-    return newHeight;
+
+      const newHeight = box.offsetHeight; // Nova altura após o conteúdo ser atualizado
+      return newHeight;
+    
   }
   
   // teste de animação
