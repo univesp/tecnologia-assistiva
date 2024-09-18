@@ -1,3 +1,517 @@
+:root{
+  --header:#dedede;
+  --box1:#d4e1c3;
+  --box2:#E8DFC6;
+  --box3:#CBCDE7;
+  --box4:#DEDEDE;
+  --white:#FFF;
+}
+
+p{
+  font-family: lexend;
+  margin: 0;
+  padding: 10px 0;
+}
+
+a{
+  word-break: break-all;
+}
+
+.p-reset{
+  padding: 0;
+}
+
+h1{
+  font-family: lexend;
+}
+
+h2{
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 19px;
+}
+
+h3{
+  font-size: 16px;
+  padding-top: 5px;
+}
+
+.ta{
+  font-weight: 200;
+}
+
+/*===background color das boxs===comeco===*/
+.bg-color-box1{
+  background-color: var(--box1);
+}
+.bg-color-box2{
+  background-color: var(--box2);
+}
+.bg-color-box3{
+  background-color: var(--box3);
+}
+.bg-color-box4{
+  background-color: var(--box4);
+}
+.bg-color-white{
+  background-color: var(--white);
+}
+/*===background color das boxs=====fim=====*/
 body {
-  background-color: #DFE6E8;
+  background-color: var(--header);
+}
+
+nav .logo img {
+  background-color: rgb(49, 49, 49);
+  padding: 20px;
+}
+
+nav .nav-link {
+  color: white;
+  background-color: black;
+}
+
+.header{
+  background-color: var(--header);
+  display: flex;
+  margin-top: 55px;
+}
+
+.header div:nth-child(1),
+.header div:nth-child(2){
+  width: 50%;
+  height: 400px;
+}
+.header div:nth-child(1){
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+.header div:nth-child(1) img{
+  /* width: 50%; */
+    transform: translateY(14px);
+    object-fit: contain;
+}
+
+.header div:nth-child(2){
+  display: flex;
+  align-items: center;
+}
+
+.header div:nth-child(2) h1{
+  border-left: 2px solid white;
+  font-size:39pt;
+  color: black;
+  font-weight: bolder;
+  width: 100%;
+  padding-left: 35px;
+}
+
+#conceito, 
+#grupos, 
+#classificacao, 
+#saibaMais,
+#videoApoio,
+#textoApoio,
+#gameQuiz{
+  background-color: #f2f2f2;
+  padding: 25px 10px;
+}
+
+#gameQuiz{
+  padding: 50px 10px 0;
+}
+
+#referenciasBibliograficas{
+  background-color: var(--box1);
+  padding: 50px 10px;
+  margin: 0;
+}
+
+.box{
+  width: 850px;
+  margin: 10px auto 45px;
+  border-right:4px solid #707070;
+  padding: 35px;
+  text-align: right;
+}
+
+footer{
+  background-color: var(--box1);
+}
+
+/* ================================= */
+.padding-horizontal{
+  padding-left: 130px;
+  padding-right: 130px;
+}
+.padding-vertical{
+  padding-top: 0;
+  padding-bottom: 35px;
+}
+.text-underline{
+  text-decoration: underline;
+}
+.fonte-p{
+  padding-top: 0;
+}
+iframe{
+  width: 100%;
+  height: 500px;
+  border-radius: 25px;
+}
+.box-shadow{
+  box-shadow: 0px 12px 13px -15px #6e6e6e;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.082);
+}
+/* ================================= */
+
+.logo-univesp{
+  padding: 15px;
+}
+
+/* seção CONCEITO */
+#conceito{
+  padding-top: 100px;
+}
+.img-title{
+  width: 45px;
+  margin: 0 20px 0 0;
+}
+
+/* seção GRUPOS */
+.content-box{
+  margin-top: 15px;
+  /* overflow: hidden; */
+}
+.content-box div:nth-child(1){
+  border-radius: 5px;
+  padding: 5px;
+  position: relative;
+  z-index: 1000;
+
+}
+.content-box div:nth-child(1) span{
+  padding: 0 10px;
+}
+.content-box div:nth-child(2){
+  padding: 10px 35px;
+  transform: translateY(0);
+  position: relative;
+  z-index: 100;
+}
+
+/* seção CLASSIFICAÇÂO */
+
+
+.ilustra-texto{
+  display: flex;
+  margin-bottom: 20px;
+}
+.ilustra-texto div img{
+width: 270px;
+}
+.ilustra-texto div:nth-child(1){
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ilustra-texto div:nth-child(2){
+  width: 390px;
+}
+
+.box-auxilio{
+  height: 100%;
+  background-color: var(--box4);
+  padding: 40px 40px 0px 50px;
+  margin-bottom: 50px;
+  transition: all 0.5s ease;
+}
+.box-auxilio img{
+  width: 135px;
+  padding: 10px 25px 0 0;
+}
+.ilustra-categoria-texto{
+  display: flex;
+}
+
+.content-btn{
+  display: flex;
+  position: relative;
+  z-index: 2;
+}
+.content-btn div:nth-child(1){
+  display: none;
+  position: relative;
+}
+
+.btn{
+  width: 200px;
+  height: 35px;
+  padding: 0px;
+  border-radius: 5px;
+  margin: 5px auto 80px;
+  background-color: #333;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.content-video-aula{
+  box-shadow: 0px 0px 10px -6px #6e6e6e;
+  margin-bottom: 50px;
+  border-radius: 5px 5px 2px 2px;
+}
+.video-aula{
+  padding: 10px;
+  border-radius: 5px;
+}
+.video-aula span{
+  margin: 0 10px;
+}
+.content-video{
+  width: 100%;
+  padding: 32px 32px 0;
+}
+.title-video{
+  margin: 0 0 0 0;
+  padding: 10px 0 35px 31px;
+  font-weight: 500;
+}
+
+/* seção TEXTOS DE APOIO */
+
+.content-box-apoio{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.box-apoio{
+  width: 48%;
+  border-radius: 2px;
+  padding: 15px 35px;
+}
+.box-apoio a{
+  text-decoration: underline;
+  color: black;
+  word-break: break-all;
+}
+
+#gameQuiz{
+  /* position: relative; */
+}
+.game-perguntas{
+  background-color: #242424;
+  color: #ececec;
+  font-weight: 700;
+  padding: 25px 15px;
+}
+.game-image{
+  border: 1px solid gray;
+  padding: 35px 5px 5px;
+}
+.game-image img{
+  width: 100%;
+  padding: 0 16px;
+}
+.game-opcoes{
+  background-color: var(--box4);
+  padding: 20px 15px 20px 75px;
+  font-weight: bold;
+  color:#3d3d3d;
+  border: 1px solid #c2c2c2;
+}
+
+.game-ilustra{
+  display: flex;
+  justify-content: right;
+}
+.game-ilustra img{
+  width: 250px;
+  transform: translateY(25px);
+}
+
+@media (max-width:1199px){
+  .box{
+    width: 793px;
+  }
+    .padding-horizontal {
+    padding-left: 70px;
+    padding-right: 70px;
+}
+iframe {
+  height: 409px;
+}
+}
+
+@media (max-width: 992px) {
+  /* *{
+    background-color: red;
+  } */
+  .container {
+      min-width: auto;
+      padding-right: 5px;
+      padding-left: 5px;
+  }
+
+  .padding-horizontal {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.header div:nth-child(2) {
+  margin-left: 10px;
+}
+
+  .box{
+    width: auto;
+  }
+  .content-box-apoio {
+    gap: 5px;
+}
+}
+
+@media (max-width: 768px) {
+  .container {
+      min-width: 720px;
+      padding-right: 5px;
+      padding-left: 5px;
+  }
+
+  .header div:nth-child(2) {
+    margin-left: 10px;
+  }
+  .box{
+    width: auto;
+  }
+
+  .padding-horizontal{
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+}
+
+
+@media (max-width: 748px) {
+
+  .container {
+    min-width: auto;
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+  .header{
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-top: 0;
+  }
+  .hedaer div:nth-child(1){
+    height: 360px;
+  }
+  .header div:nth-child(2) {
+    /* transform: translateX(-40px); */
+    height: 360px;
+    width: 100%;
+    margin: 0px 0 0 10px;
+  }
+  .header div:nth-child(1) img{
+    width: 355px;
+  }
+  .ilustra-texto{
+    flex-direction: column-reverse;
+  }
+  .ilustra-texto div:nth-child(1){
+    width: auto;
+  }
+  .ilustra-texto div:nth-child(2) {
+    width: auto;
+  }
+  iframe {
+    height: 233px;
+    border-radius: 10px;
+  }
+  .content-video iframe{
+    height: 195px;
+  }
+  .content-box-apoio {
+    gap: 5px;
+    flex-direction: column;
+  }
+  .box-apoio {
+    width: auto;
+  }
+  .ilustra-categoria-texto{
+    position: relative;
+    flex-direction: column;
+  }
+  .ilustra-categoria-texto div:nth-child(1) {
+    /* border: 1px solid red; */
+    margin: 0 auto 30px;
+    padding: 0;
+    /* height: 300px; */
+    /* height: fit-content; */
+  }
+  .ilustra-categoria-texto div:nth-child(2) {
+    /* border: 1px solid blue; */
+    /* position: absolute; */
+    top: 0;
+    width: 100%;
+  }
+}
+
+.box-auxilio-frente{
+  position: relative;
+}
+#box-auxilio{
+  position: relative;
+  z-index: 100;
+}
+.box-auxilio-sombra{
+  position: relative;
+  z-index: 1;
+}
+.box-referencia{
+  display: block;
+  position: absolute;
+  z-index: 1000000;
+  opacity: 0;
+}
+
+/* Define a transição de opacidade */
+.paragraph {
+  opacity: 1;
+  transition: all 0.5s ease;
+}
+
+/* Classe para ocultar o texto */
+.hidden {
+  opacity: 0;
+}
+
+/* gameQuiz */
+
+.game-opcoes {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.game-opcoes input[type="radio"] {
+  margin-right: 10px;
+}
+
+.game-opcoes label {
+  cursor: pointer;
+  padding: 5px;
+}
+
+.game-opcoes input[type="radio"]:checked + label {
+  color: #007BFF; /* Cor para o texto do item selecionado */
+  font-weight: bold;
 }
