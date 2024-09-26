@@ -18,16 +18,53 @@ $(document).ready(function(){
   //////////////////////////////////////////////////////////////////
 
   // Seu código abaixo
-  //
-  // Seu código acima
+  function preloadImages(imageArray) {
+    imageArray.forEach(src => {
+        const img = new Image();
+        img.src = src;
+    });
+  }
 
-})
+  // Array com os URLs das imagens
+  const imagesToPreload = [
+      'assets/quiz_01.jpeg',
+      'assets/quiz_02.jpeg',
+      'assets/quiz_03.jpeg',
+      'assets/quiz_04.jpeg',
+      'assets/quiz_05.jpeg',
+      'assets/quiz_06.jpeg',
+      'assets/quiz_07.jpeg',
+      'assets/quiz_08.jpeg',
+      'assets/quiz_09.jpeg',
+      'assets/quiz_10.jpeg',
+      'assets/categoria_01.svg',
+      'assets/categoria_02.svg',
+      'assets/categoria_03.svg',
+      'assets/categoria_04.svg',
+      'assets/categoria_05.svg',
+      'assets/categoria_06.svg',
+      'assets/categoria_07.svg',
+      'assets/categoria_08.svg',
+      'assets/categoria_09.svg',
+      'assets/categoria_10.svg',
+      'assets/categoria_11.svg',
+      'assets/categoria_12.svg',
+      // Adicione mais URLs de imagens conforme necessário
+  ];
+
+  // Chama a função para pré-carregar as imagens
+  preloadImages(imagesToPreload);
+
+    // Seu código acima
+
+  })
 
 let box = document.getElementById("box-auxilio");
 let boxReferencia = document.getElementById("box-auxilio2");
 let tamanhoBox = [];
 var n = 0;
 
+var paragraph = document.querySelectorAll('.paragraph');
 // tamanhoBox.push(box.clientHeight)
 
 function nextBtn(){
@@ -177,6 +214,10 @@ let infoBox = [
       box.children[1].innerHTML = "Exemplos";
       box.children[2].innerHTML = infoBox[n][4];
 
+      paragraph.forEach(element => {  
+        element.classList.remove('hidden');
+      })
+
       }, 500);
     }
   }
@@ -201,16 +242,12 @@ let infoBox = [
     else{console.log("saiu")}
   }
 
-
   // teste de animação
   function changeText() {
-    let paragraph = document.querySelectorAll('.paragraph');
+
     paragraph.forEach(element => {
       element.classList.add('hidden');
 
-      setTimeout(() => {
-        element.classList.remove('hidden');
-      }, 500);
     })
   }
 
@@ -224,5 +261,32 @@ let infoBox = [
       return newHeight;
     
   }
+
+
+  const elements = document.querySelectorAll('.animate__animated');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {  // Verifica se o elemento está visível
+        if (entry.target.tagName === 'IMG') { // Verifica se é uma imagem
+          entry.target.classList.add("animate__bounceInRight"); // Animação para imagens
+        } else {
+          entry.target.classList.add("animate__bounceInLeft"); // Animação para outros elementos
+        }
+        observer.unobserve(entry.target); // Para não adicionar a animação repetidamente
+      }
+    });
+  }, {
+    threshold: 0.2  // Define o percentual do elemento visível para acionar a animação
+  });
   
-  // teste de animação
+  // Comece a observar todos os elementos selecionados
+  elements.forEach(element => {
+    observer.observe(element);
+  });
+  
+  
+
+  
+
+// teste de animação
