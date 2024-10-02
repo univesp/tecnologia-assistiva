@@ -211,26 +211,39 @@ iframe{
 
 /* seção GRUPOS */
 .content-box{
-  margin-top: 15px;
+  margin: 0;
   /* overflow: hidden; */
 }
-.content-box div:nth-child(1){
+button.bg-color-box1 {
+  width: 100%;
+  border: none;
+}
+button:focus {
+  outline: 0px dotted;
+  outline: 0px auto -webkit-focus-ring-color;
+}
+.content-box div{
   border-radius: 5px;
   padding: 5px;
   position: relative;
   z-index: 1000;
-
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  cursor: pointer;
 }
-.content-box div:nth-child(1) span{
+.content-box div span{
   padding: 0 10px;
 }
-.content-box div:nth-child(2){
-  padding: 10px 35px;
-  transform: translateY(0);
-  position: relative;
-  z-index: 100;
+.content-box div span img{
+  transition: all 0.3s ease;
 }
-
+.accordion-item{
+  margin-bottom: -9px !important;
+}
+.accordion-item p{
+  padding: 10px 25px;
+}
 /* seção CLASSIFICAÇÂO */
 
 
@@ -488,6 +501,12 @@ width: 270px;
   display: none;
 }
 
+.box-info{
+  border: 1px solid #838383;
+  max-width: 854px;
+  border-radius: 2px;
+  margin: 35px auto;
+}
 
 
 @media (max-width:1199px){

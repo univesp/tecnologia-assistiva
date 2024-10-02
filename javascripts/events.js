@@ -63,6 +63,7 @@ let box = document.getElementById("box-auxilio");
 let boxReferencia = document.getElementById("box-auxilio2");
 let tamanhoBox = [];
 var n = 0;
+let buttonRecursosServicos = document.querySelectorAll('.buttonRecursosServicos');
 
 var paragraph = document.querySelectorAll('.paragraph');
 // tamanhoBox.push(box.clientHeight)
@@ -98,7 +99,7 @@ let infoBox = [
   ],//0
   [
     "assets/categoria_02.svg",
-    "Comunicação Aumentativa e Alternativa (CAA).",
+    "Comunicação Aumentativa e Alternativa (C.A.A.).",
     "Destinada a atender pessoas sem fala ou escrita funcional ou em defasagem entre sua necessidade comunicativa e sua habilidade em falar e/ou escrever.",
     "Exemplos",
     "Recursos como as pranchas de comunicação, construídas com simbologia gráfica (ARASAAC, SymbolStix, Widgit, BLISS, PCS e outros), letras ou palavras escritas (para expressar desejos, sentimentos, entendimentos), vocalizadores (pranchas com produção de voz) ou o computador com softwares específicos e pranchas dinâmicas em computadores tipo tablets."
@@ -108,7 +109,7 @@ let infoBox = [
     "Recursos de acessibilidade ao computador.",
     "Conjunto de hardware e software especialmente idealizado para tornar o computador acessível a pessoas com privações sensoriais (visuais e auditivas), intelectuais e motoras. Inclui dispositivos de entrada (mouses, teclados e acionadores diferenciados) e dispositivos de saída (sons, imagens e informações táteis).",
     "Exemplos",
-    "Recursos de dispositivo de entrada como teclados modificados, os teclados virtuais com varredura, mouses especiais e acionadores diversos, software de reconhecimento de voz, dispositivos apontadores que valorizam movimento de cabeça, movimento de olhos, ondas cerebrais (pensamento), órteses e ponteiras para digitação, entre outros. Como dispositivos de saída podemos citar softwares leitores de tela, software para ajustes de cores e tamanhos das informações (efeito lupa), os softwares leitores de texto impresso (OCR), impressoras braile e linha braile, impressão em relevo, entre outros."
+    "Recursos de dispositivo de entrada como teclados modificados, os teclados virtuais com varredura, mouses especiais e acionadores diversos, software de reconhecimento de voz, dispositivos apontadores que valorizam movimento de cabeça, movimento de olhos, ondas cerebrais (pensamento), órteses e ponteiras para digitação, entre outros. Como dispositivos de saída podemos citar softwares leitores de tela, software para ajustes de cores e tamanhos das informações (efeito lupa), os softwares leitores de texto impresso (O.C.R.), impressoras braile e linha braile, impressão em relevo, entre outros."
   ],//2
   [
     "assets/categoria_04.svg",
@@ -157,7 +158,7 @@ let infoBox = [
     "Auxílios para pessoas com deficiência auditiva.",
     "Equipamentos que visam à independência das pessoas com deficiência auditiva na realização das tarefas diárias.",
     "Exemplos",
-    "Equipamentos como infravermelho, FM, aparelhos para surdez, telefones com teclado-teletipo (TTY), sistemas com alerta táctil-visual, celular com mensagens escritas e chamadas por vibração, software que favorece a comunicação ao telefone celular transformando em voz o texto digitado no celular e em texto a mensagem falada. Livros, textos e dicionários digitais em língua de sinais. Sistema de legendas (close-caption / subtitles)."
+    "Equipamentos como infravermelho, FM, aparelhos para surdez, telefones com teclado-teletipo (T.T.Y.), sistemas com alerta táctil-visual, celular com mensagens escritas e chamadas por vibração, software que favorece a comunicação ao telefone celular transformando em voz o texto digitado no celular e em texto a mensagem falada. Livros, textos e dicionários digitais em língua de sinais. Sistema de legendas (close-caption / subtitles)."
   ],//9
   [
     "assets/categoria_11.svg",
@@ -211,7 +212,7 @@ let infoBox = [
       box.children[0].children[0].children[0].src = infoBox[n][0];
       box.children[0].children[1].children[0].innerHTML = `<strong style="text-transform: uppercase;">${infoBox[n][1]}</strong>`;
       box.children[0].children[1].children[1].innerHTML = infoBox[n][2];
-      box.children[1].innerHTML = "Exemplos";
+      box.children[1].innerHTML = "Exemplos:";
       box.children[2].innerHTML = infoBox[n][4];
 
       paragraph.forEach(element => {  
@@ -228,7 +229,7 @@ let infoBox = [
       // boxReferencia.children[0].children[0].children[0].src = infoBox[n+1][0];
       boxReferencia.children[0].children[1].children[0].innerHTML = `<strong style="text-transform: uppercase;">${infoBox[n+1][1]}</strong>`;
       boxReferencia.children[0].children[1].children[1].innerHTML = infoBox[n+1][2];
-      boxReferencia.children[1].innerHTML = "Exemplos";
+      boxReferencia.children[1].innerHTML = "Exemplos:";
       boxReferencia.children[2].innerHTML = infoBox[n+1][4];
 
     }
@@ -236,7 +237,7 @@ let infoBox = [
       boxReferencia.children[0].children[0].children[0].src = infoBox[11][0];
       boxReferencia.children[0].children[1].children[0].innerHTML = `<strong style="text-transform: uppercase;">${infoBox[11][1]}</strong>`;
       boxReferencia.children[0].children[1].children[1].innerHTML = infoBox[11][2];
-      boxReferencia.children[1].innerHTML = "Exemplos";
+      boxReferencia.children[1].innerHTML = "Exemplos:";
       boxReferencia.children[2].innerHTML = infoBox[11][4];
     }
     else{console.log("saiu")}
@@ -285,7 +286,25 @@ let infoBox = [
     observer.observe(element);
   });
   
-  
+  buttonRecursosServicos.forEach(element => {
+    element.addEventListener("click", function(){
+      // alert("Clicou no clique");
+
+      const span = this.querySelector('span');
+      
+
+      if(span.children[0].style.transform == "rotate(180deg)"){
+        span.children[0].style.transform = "rotate(0deg)"
+      } else {
+        span.children[0].style.transform = "rotate(180deg)";
+      }
+
+      console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+      console.log(span.children[0].style.transform)
+      console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+    });
+  });
+
 
   
 
