@@ -48,11 +48,9 @@ $(document).ready(function(){
       'assets/categoria_09.svg',
       'assets/categoria_10.svg',
       'assets/categoria_11.svg',
-      'assets/categoria_12.svg',
-      // Adicione mais URLs de imagens conforme necessário
+      'assets/categoria_12.svg'
   ];
 
-  // Chama a função para pré-carregar as imagens
   preloadImages(imagesToPreload);
 
     // Seu código acima
@@ -66,7 +64,6 @@ var n = 0;
 let buttonRecursosServicos = document.querySelectorAll('.buttonRecursosServicos');
 
 var paragraph = document.querySelectorAll('.paragraph');
-// tamanhoBox.push(box.clientHeight)
 
 function nextBtn(){
   if(n >= 0 && n <= 11){
@@ -179,6 +176,66 @@ let infoBox = [
   boxInterativo(n);
   boxReferenciaTamanho(n);
 
+  function trocaDeBtnVideoYoutube(btn, videoYT1, videoYT2){
+    document.querySelectorAll(`.${btn}`).forEach(element => {
+      element.addEventListener("click", function(){
+        if(this.classList == `btn-layout ${btn} desligado` && this.parentNode.children[1].classList == `btn-layout ${btn} desligado`){
+
+        this.parentNode.children[1].classList = `btn-layout ${btn} ligado`;
+        this.parentNode.children[0].classList = `btn-layout ${btn} desligado`;
+
+        this.parentNode.parentNode.children[0].children[0].children[0].children[0].href = videoYT1;
+
+        this.parentNode.parentNode.children[0].children[0].classList.remove("scale-up-hor-left");
+        this.parentNode.parentNode.children[0].children[0].classList.add("scale-up-hor-right");
+
+        } else if(this.classList == `btn-layout ${btn} desligado` && this.parentNode.children[0].classList == `btn-layout ${btn} desligado`) {
+
+        this.parentNode.children[1].classList = `btn-layout ${btn} desligado`;
+        this.parentNode.children[0].classList = `btn-layout ${btn} ligado`;
+
+        this.parentNode.parentNode.children[0].children[0].children[0].children[0].href = videoYT2;
+
+        this.parentNode.parentNode.children[0].children[0].classList.remove("scale-up-hor-right");
+        this.parentNode.parentNode.children[0].children[0].classList.add("scale-up-hor-left");
+        }
+        console.log(this.parentNode.parentNode.children[0].children[0].children[0].children[0])
+      });
+    });
+  }
+
+  function trocaDeVideo(btn){
+  document.querySelectorAll(`.${btn}`).forEach(element => {
+    element.addEventListener("click", function(){
+      if(this.classList == `btn-layout ${btn} desligado` && this.parentNode.children[1].classList == `btn-layout ${btn} desligado`){
+      this.parentNode.parentNode.children[0].children[0].children[0].style.display = 'none';
+      this.parentNode.parentNode.children[0].children[0].children[1].style.display = 'flex';
+
+      this.parentNode.children[1].classList = `btn-layout ${btn} ligado`;
+      this.parentNode.children[0].classList = `btn-layout ${btn} desligado`;
+
+      this.parentNode.parentNode.children[0].children[0].classList.remove("scale-up-hor-left");
+      this.parentNode.parentNode.children[0].children[0].classList.add("scale-up-hor-right");
+
+      } else if(this.classList == `btn-layout ${btn} desligado` && this.parentNode.children[0].classList == `btn-layout ${btn} desligado`) {
+
+      this.parentNode.parentNode.children[0].children[0].children[0].style.display = 'flex';
+      this.parentNode.parentNode.children[0].children[0].children[1].style.display = 'none';
+
+      this.parentNode.children[1].classList = `btn-layout ${btn} desligado`;
+      this.parentNode.children[0].classList = `btn-layout ${btn} ligado`;
+
+      this.parentNode.parentNode.children[0].children[0].classList.remove("scale-up-hor-right");
+      this.parentNode.parentNode.children[0].children[0].classList.add("scale-up-hor-left");
+      }
+    });
+  });
+}
+
+trocaDeVideo('title-video')
+trocaDeVideo('title-video2')
+trocaDeVideo('title-video3')
+
   function boxInterativo(n){
     changeText();
 
@@ -226,7 +283,6 @@ let infoBox = [
   function boxReferenciaTamanho(n){
     if(n >= 0 && n <= 10){
 
-      // boxReferencia.children[0].children[0].children[0].src = infoBox[n+1][0];
       boxReferencia.children[0].children[1].children[0].innerHTML = `<strong style="text-transform: uppercase;">${infoBox[n+1][1]}</strong>`;
       boxReferencia.children[0].children[1].children[1].innerHTML = infoBox[n+1][2];
       boxReferencia.children[1].innerHTML = "Exemplos:";
@@ -243,7 +299,6 @@ let infoBox = [
     else{console.log("saiu")}
   }
 
-  // teste de animação
   function changeText() {
 
     paragraph.forEach(element => {
@@ -261,6 +316,15 @@ let infoBox = [
       const newHeight = box.offsetHeight; // Nova altura após o conteúdo ser atualizado
       return newHeight;
     
+  }
+
+  function btnAutoClicavel(){
+    const button = document.querySelectorAll('.btn-auto');
+
+    button.forEach(element => {
+      element.click();
+    })
+
   }
 
 
@@ -285,6 +349,52 @@ let infoBox = [
   elements.forEach(element => {
     observer.observe(element);
   });
+
+  
+
+  const elementsBtn = document.querySelectorAll('.btn-auto');
+
+function isElement80PercentInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    const viewportHeight = window.innerHeight;
+    
+    // 80% da altura da viewport
+    const eightyPercentViewport = viewportHeight * 0.8;
+
+    // Verifica se o topo do elemento está acima de 20% da altura da viewport
+    // e se a parte inferior do elemento está abaixo de 80% da altura da viewport
+    return rect.top < eightyPercentViewport && rect.bottom > 0;
+}
+
+let numeroDeVerificacao = "não clicou";
+function checkVisibility() {
+    elementsBtn.forEach((btn) => {
+        if (isElement80PercentInViewport(btn)) {
+          if(numeroDeVerificacao == "não clicou"){
+             btnAutoClicavel();
+             numeroDeVerificacao = "já clicou";
+          
+             console.log(numeroDeVerificacao)
+        }
+        } else {
+            console.log(`#btn-auto não está pelo menos 80% visível na tela.`);
+            if(numeroDeVerificacao == "já clicou"){
+              // btnAutoClicavel();
+              // numeroDeVerificacao = "não clicou";
+            }
+            // numeroDeVerificacao = 1;
+        }
+    });
+}
+
+// Adiciona o event listener para o scroll
+window.addEventListener('scroll', checkVisibility);
+
+// Também verifica a visibilidade inicialmente
+checkVisibility();
+
+    
+
   
   buttonRecursosServicos.forEach(element => {
     element.addEventListener("click", function(){
@@ -304,8 +414,3 @@ let infoBox = [
       console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
     });
   });
-
-
-  
-
-// teste de animação
