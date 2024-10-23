@@ -223,7 +223,7 @@
           <h2 class="padding-horizontal padding-vertical"><span><img src="assets/icone_categorias.svg" class="img-title"></span>CLassificação em categorias</h2>
           <div class="ilustra-texto padding-horizontal">
             <div>
-              <img src="assets/ilustra_2.png" alt="Ilustração de uma mulher em cadeira de rodas azul escuro. Ela é branca, tem olhos escuros, cabelo longo e azul escuro, está com um par de brincos triangulares verdes claros, uma roupa azul escuro e sapatos brancos. Ela está sentada na cadeira de rodas e possui um notebook verde claro aberto em seu colo">
+              <img src="assets/ilustra_2.png" tabindex="0" alt="Ilustração de uma mulher em cadeira de rodas azul escuro. Ela é branca, tem olhos escuros, cabelo longo e azul escuro, está com um par de brincos triangulares verdes claros, uma roupa azul escuro e sapatos brancos. Ela está sentada na cadeira de rodas e possui um notebook verde claro aberto em seu colo">
             </div>
             <div>
               <p>A classificação em categorias foi escrita primeiro 
@@ -241,15 +241,15 @@
                 Learning and Center on Disabilities. </p>
             </div>
           </div>
-          <p class="padding-horizontal">Esta classificação também foi utilizada pelo Ministério da Fazenda; Ciência, Tecnologia e Inovação e pela 
+          <p class="padding-horizontal" tabindex="0">Esta classificação também foi utilizada pelo Ministério da Fazenda; Ciência, Tecnologia e Inovação e pela 
             Secretaria Nacional de Direitos Humanos da Presidência da República, na publicação da Portaria 
             Interministerial nº 362, de 24 de outubro de 2012, que trata sobre a linha de crédito subsidiado para 
             aquisição de bens e serviços de Tecnologia Assistiva destinados às pessoas com deficiência e sobre o rol dos 
             bens e serviços.</p>
-          <p class="padding-horizontal">Os recursos de Tecnologia Assistiva também são organizados de acordo com objetivos funcionais a que se 
+          <p class="padding-horizontal" tabindex="0">Os recursos de Tecnologia Assistiva também são organizados de acordo com objetivos funcionais a que se 
             destinam e levam em consideração a ISO 9999/2002, como uma importante classificação internacional de 
             recursos, aplicada em vários países.</p>
-          <p class="padding-horizontal mb-4">São elas:</p>
+          <p class="padding-horizontal mb-4" tabindex="0">São elas:</p>
           <div class="container padding-horizontal">
             <p class="box-info">Para navegar e ler as informações, selecione os botões abaixo “PRÓXIMO” ou “ANTERIOR”.</p>
           </div>
@@ -261,7 +261,7 @@
             <div id="box-auxilio2" class="box-auxilio box-shadow box-referencia" aria-hidden="true" >
               <div class="ilustra-categoria-texto" aria-hidden="true" >
                 <div>
-                  <img src="assets/categoria_01.svg" class="paragraph" alt="" aria-hidden="true" >
+                  <img src="" class="paragraph" alt="" aria-hidden="true" >
                 </div>
                 <div>
                   <p class="paragraph" aria-hidden="true" ><strong>AUXÍLIOS PARA A VIDA DIÁRIA E PRÁTICA.</strong></p>
@@ -532,8 +532,8 @@
               </div>
 
               <div class="game-content">
-                <div style="min-width: 55%;">
-                  <div class="game-perguntas">
+                <div style="max-width: 60%;">
+                  <div class="game-perguntas" style="padding-top: 7px; padding-bottom: 7px;">
                     <p class="label"></p>
                   </div>
                     <div>               
@@ -592,19 +592,23 @@
                         </div>
                       </div>
 
-                      <div style="display: flex;justify-content: center;" class="mt-5">
+                      <div style="display: flex;justify-content: center;" class="mt-4">
                         <button class="btn-layout-verificar" id="verificar">verificar</button>
                       </div>
 
-                      <div style="display: flex;justify-content: center;" class="mt-5">
+                      <div style="display: flex;justify-content: center;" class="mt-4">
                         <button class="btn-layout-avancar" id="jogo" >Avançar</button>
+                      </div>
+
+                      <div style="display: none;justify-content: center;" class="mt-4">
+                        <button class="btn-layout-avancar" id="gabarito" onclick="finalizeGame()">Gabarito</button>
                       </div>
                     </div>
                 </div>
                 <div class="game-image">
                   <img src="assets/quiz_01.jpeg" alt="" class="label">
                   <div class="creditos-imagem">
-                    <p class="text-right pr-5 label">Fonte da imagem: Adobe Stock – ID 402309543.</p>
+                    <p class="">Fonte da imagem: Adobe Stock – ID 402309543.</p>
                   </div>
                 </div>
               </div>

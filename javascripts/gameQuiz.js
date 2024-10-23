@@ -1,7 +1,14 @@
-// const gameOpcoes = document.querySelectorAll(".game-opcoes");
 const gameImage = document.querySelectorAll(".game-image");
 const gamePerguntas = document.querySelectorAll(".game-perguntas");
 const btnRefazer = document.getElementById("refazer");
+
+let gameOpcoes = document.querySelectorAll('.game-opcoes');
+let minhasPerguntas = document.querySelectorAll('.game-perguntas');
+let minhasImage = document.querySelectorAll('.game-image');
+let check = document.querySelectorAll('.check');
+let avancar = document.getElementById('jogo');
+let btnVerificar = document.getElementById('verificar');
+let btnGabarito = document.getElementById('gabarito');
 
 let respostaCorreta = [];
 let answersPlayer = [];
@@ -12,18 +19,11 @@ var questoesAcertada = 0;
 var numeroGabarito = 0;
 let deQuemEaVez = 0;
 
-let gameOpcoes = document.querySelectorAll('.game-opcoes');
-let minhasPerguntas = document.querySelectorAll('.game-perguntas');
-let minhasImage = document.querySelectorAll('.game-image');
-let check = document.querySelectorAll('.check');
-let avancar = document.getElementById('jogo');
-let btnVerificar = document.getElementById('verificar');
 
-// minhas variaveis
 
 const quizData = [
     {
-        question: "1) As barras de apoio correspondem a qual categoria de T.A.?",
+        question: "1) As barras de apoio correspondem a qual categoria de Tecnologia Assistiva?",
         image: "assets/quiz_01.jpeg",
         alt:"A foto mostra uma senhora com cabelos brancos e curtos, segurando em uma barra de apoio metálica. Ela está vestindo uma camisa cinza estampada com o que parecem ser pequenos desenhos abstratos coloridos.",
         font: "Fonte da imagem: Adobe Stock – ID 402309543.",
@@ -36,7 +36,7 @@ const quizData = [
         correct: "Auxílios para a vida diária e prática."
     },
     {
-        question: "2) Os teclados em braile correspondem a qual categoria de T.A.?",
+        question: "2) Os teclados em braile correspondem a qual categoria de Tecnologia Assistiva?",
         image: "assets/quiz_02.jpeg",
         alt:"A foto exibe uma visão em close de um teclado com teclas amarelas que possuem caracteres em Braille. Os pontos em Braille estão dispostos em padrões retangulares em cada tecla, sugerindo que o teclado é projetado para usuários com deficiência visual, permitindo que eles digitem usando o sistema Braille. O fundo é uma superfície de madeira desfocada, que coloca o foco no teclado.",
         font: "Fonte da imagem: Adobe Stock – ID 435941715.",
@@ -49,7 +49,7 @@ const quizData = [
         correct: "Recursos de acessibilidade ao computador."
     },
     {
-        question: "3) O aplicativo com controle remoto universal corresponde a qual categoria de T.A.?",
+        question: "3) O aplicativo com controle remoto universal corresponde a qual categoria de Tecnologia Assistiva?",
         image: "assets/quiz_03.jpeg",
         alt:"A foto mostra as mãos de uma pessoa branca segurando um smartphone com um aplicativo de casa inteligente na tela. O aplicativo exibe vários controles e informações relacionadas à automação residencial. Na metade superior da tela, há uma roda colorida com ícones indicando diferentes funções, como iluminação, controle de temperatura e segurança. Abaixo desta roda, há um controle deslizante de temperatura definido em 24 graus Celsius, sugerindo que o usuário pode ajustar a temperatura de sua casa usando este aplicativo. O fundo da imagem mostra um interior de cozinha moderno, indicando que o sistema de casa inteligente pode estar controlando recursos neste espaço.",
         font: "Fonte da imagem: Adobe Stock – ID 376177259.",
@@ -62,7 +62,7 @@ const quizData = [
         correct: "Sistemas de controle de ambiente."
     },
     {
-        question: "4) As rampas correspondem a qual categoria de T.A.?",
+        question: "4) As rampas correspondem a qual categoria de Tecnologia Assistiva?",
         image: "assets/quiz_04.jpeg",
         alt:"A foto mostra um close-up de uma cadeira de rodas motorizada na borda de uma rampa. A cadeira de rodas está posicionada na rampa texturizada, indicando uma área que normalmente sinaliza uma transição para uma zona diferente, como o início ou fim de uma calçada.",
         font: "Fonte da imagem: Adobe Stock – ID 457010462.",
@@ -75,7 +75,7 @@ const quizData = [
         correct: "Projetos arquitetônicos para acessibilidade."
     },
     {
-        question: "5) Uma mão robótica corresponde a qual categoria de T.A.?",
+        question: "5) Uma mão robótica corresponde a qual categoria de Tecnologia Assistiva?",
         image: "assets/quiz_05.jpeg",
         alt:"A foto mostra uma mulher branca e longos cabelos castanhos lisos, que está acoplando em seu antebraço uma mão robótica preta e moderna, que é detalhada com dedos articulados, que parecem capazes de movimento e função semelhante a uma mão humana. A mulher é jovem, está vestindo uma camisa azul clara com uma camiseta branco por baixo e está em um ambiente interno, possivelmente uma sala de estar, com paredes claras e decoração minimalista ao fundo. ",
         font: "Fonte da imagem: Adobe Stock – ID 511843919.",
@@ -88,7 +88,7 @@ const quizData = [
         correct: "Órteses e próteses."
     },
     {
-        question: "6) As placas em braile correspondem a qual categoria de T.A.?",
+        question: "6) As placas em braile correspondem a qual categoria de Tecnologia Assistiva?",
         image: "assets/quiz_06.jpeg",
         alt:"A foto mostra um close-up de um painel de controle de elevador com botões para diferentes andares. Os botões estão organizados em duas colunas. A coluna da esquerda, de cima para baixo, tem os números 6, 4, 2 e B1 (indicando o primeiro subsolo). A coluna da direita tem a letra R (provavelmente indicando telhado ou um nível especial), seguida pelos números 5, 3 e 1. Cada botão é circular com numeração ou letras brancas em um fundo escuro. Ao lado de cada botão existe uma pequena placa metálica com escrita em braile.",
         font: "Fonte da imagem: Adobe Stock – ID 254840327.",
@@ -102,7 +102,7 @@ const quizData = [
         correct: "Auxílios para pessoas com deficiência visual."
     },
     {
-        question: "7) Os aparelhos auditivos correspondem a qual categoria de T.A.?",
+        question: "7) Os aparelhos auditivos correspondem a qual categoria de Tecnologia Assistiva?",
         image: "assets/quiz_07.jpeg",
         alt:"A foto mostra um close-up do lado esquerdo da cabeça de um homem branco, focando na orelha onde se encaixa um aparelho auditivo bege. O aparelho é pequeno e curvado, projetado para se ajustar confortavelmente atrás da orelha, com um tubo fino e transparente que se estende até a entrada do canal auditivo, onde uma ponta branca menor é inserida para transmitir o som. A pele da bochecha tem uma barba rala.",
         font: "Fonte da imagem: Adobe Stock – ID 237775616.",
@@ -115,7 +115,7 @@ const quizData = [
         correct: "Auxílios para pessoas com deficiência auditiva."
     },
     {
-        question: "8) Os veículos adaptados e com rampa correspondem a qual categoria de T.A.?",
+        question: "8) Os veículos adaptados e com rampa correspondem a qual categoria de Tecnologia Assistiva?",
         image: "assets/quiz_08.jpeg",
         alt:"A foto mostra uma rampa de acesso para cadeira de rodas sendo desdobrada de um veículo. A rampa é metálica, com uma superfície perfurada para aderência e está fixada ao chão do veículo, que parece ser uma van adaptada. O veículo está estacionado em uma estrada asfaltada ao lado de uma área gramada. É interessante notar que a rampa permite o acesso independente ao veículo para pessoas que utilizam cadeira de rodas, promovendo a inclusão.",
         font: "Fonte da imagem: Adobe Stock – ID 297132471.",
@@ -128,7 +128,7 @@ const quizData = [
         correct: "Mobilidade e adaptações em veículos."
     },
     {
-        question: "9) As cadeiras de rodas para basquete correspondem a qual categoria de T.A.?",
+        question: "9) As cadeiras de rodas para basquete correspondem a qual categoria de Tecnologia Assistiva?",
         image: "assets/quiz_09.jpeg",
         alt:"A foto mostra cinco paratletas em cadeiras de rodas, alinhados lado a lado em uma quadra esportiva interna. Eles estão vestindo uniformes esportivos vermelhos com números visíveis e o logotipo de uma equipe. As cadeiras de rodas são especializadas, com rodas anguladas para maior estabilidade e manobrabilidade. O fundo é uma parede amarela sólida com três faixas horizontais vermelhas separadas.",
         font: "Fonte da imagem: Adobe Stock – ID 279225021.",
@@ -141,7 +141,7 @@ const quizData = [
         correct: "Esporte e lazer."
     },
     {
-        question: "10) Os andadores e as bengalas correspondem a qual categoria de T.A.?",
+        question: "10) Os andadores e as bengalas correspondem a qual categoria de Tecnologia Assistiva?",
         image: "assets/quiz_10.jpeg",
         alt:"A foto do lado esquerdo mostra um rapaz adolescente, ele é branco e tem cabelos curtos castanhos. Ele está utilizando um andador com rodas, projetado para auxiliar na locomoção. Ele está vestindo uma camiseta roxa de mangas curtas, calça jeans e tênis cinza com detalhes pretos. O andador possui uma estrutura metálica preta com quatro rodas grandes cinzas, apoios de mão acolchoados, com freios e um assento integrado. Há também uma cesta de arame abaixo do assento. E a foto do lado direito mostra um menino branco pequeno ainda criança, utilizando um andador pediátrico amarelo. Ele possui cabelo curto e loiro, além de ter olhos azuis. Ele veste uma blusa de manga longa cinza e calça jeans azul, com sapatos ortopédicos brancos que têm detalhes em preto, verde e laranja. O andador tem quatro rodas, duas alças pretas que a criança segura e uma estrutura metálica com banco que oferece suporte para seu corpo enquanto caminha. Ao fundo, há o piso de madeira de uma casa e parcialmente visível à esquerda está uma mulher adulta vestindo uma blusa de manga longa azul e calça jeans.",
         font: "Fonte da imagem: Adobe Stock – ID 399113855 - 546285258.",
@@ -180,7 +180,8 @@ gameOpcoes.forEach(e => {
     e.addEventListener('click', answerSelect);
 })
 
-document.getElementById('jogo').addEventListener('click', function(){
+avancar.addEventListener('click', function(){
+    habilitaClick();
     limparParagrafoCriado();
     removeActiveFlag();
     limparImageCriado();
@@ -193,6 +194,8 @@ proximaPergunta();
 verificarQualBtnVez();
 
 function changeHandler() {
+
+
     let falseOrTrue = [];
     for(let nu = 0; nu < 5; nu++){
         if(check[nu].classList.contains('check-active')){
@@ -204,7 +207,9 @@ function changeHandler() {
 
     if(falseOrTrue.includes('true')){
         verificarRespostaCerta();
-        verificarQualBtnVez();
+        verificarQualBtnVez();    
+        desabilitarClick();
+
     }
 }
 
@@ -234,14 +239,16 @@ function updateImage(){
     minhasImage[0].children[0].alt = quizData[numeroDaPergunta].alt;
 }
 
-function answerSelect(){    
+function answerSelect(){
+        removeActiveFlag();
+        this.children[0].children[0].classList.add('check-active');
+        this.style.backgroundColor = '#ccc';
 
-    removeActiveFlag();
-    this.children[0].children[0].classList.add('check-active');
-    this.style.backgroundColor = '#ccc';
 }
 
 function verificarRespostaCerta(){
+    
+    // console.log(gameOpcoes.children[1].children[1])
     for(let nu = 0; nu < 5; nu++){
         if(check[nu].classList.contains('check-active') && numeroDaPergunta == answersPlayer.length){
             answersPlayer.push(check[nu].parentNode.parentNode.children[1].children[0].innerText)
@@ -260,11 +267,15 @@ function verificarRespostaCerta(){
     }
 
     if(numeroDaPergunta == 9){
+        console.log(avancar)
+
+        avancar.parentNode.style.display = 'none';
+        btnGabarito.parentNode.style.display = 'flex';
         
-        setTimeout(() => {
-            finalizeGame();
+        // setTimeout(() => {
+        //     finalizeGame();
             
-        }, 5000);
+        // }, 5000);
     }    
 }
 
@@ -324,6 +335,18 @@ function createImageErrado(){
     return im;
 }
 
+function desabilitarClick(){
+    gameOpcoes.forEach(e => {
+        e.style.pointerEvents = 'none';
+    })
+}
+
+function habilitaClick(){
+    gameOpcoes.forEach(e => {
+        e.style.pointerEvents = 'auto';
+    })
+}
+
 function limparImageCriado(){
     for(let x = 0; x < 5; x++){
         if(gameOpcoes[x].children[2]){
@@ -365,6 +388,9 @@ function embaralharRespostas(){
 function finalizeGame() {
     const gameContent = document.querySelectorAll(".game-content");
     const gameContentGabarito = document.getElementById("gameContent");
+
+    
+    btnGabarito.parentNode.style.display = 'none';
     gameContent[0].style.display = "none";
     // Calcula respostas corretas
     calculateCorrectAnswers();
@@ -396,6 +422,7 @@ function refazer() {
     const gameContent = document.querySelectorAll(".game-content");
 
     gameContent[0].style.display = "flex";
+    avancar.parentNode.style.display = 'flex';
     gameContentGabarito.style.display = "none";
     gameContentGabarito.children[0].remove();
     questoesAcertada = 0;
@@ -408,4 +435,5 @@ function refazer() {
     removeActiveFlag();
     limparImageCriado();
     verificarQualBtnVez();
+    habilitaClick();
 }

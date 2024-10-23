@@ -92,84 +92,96 @@ let infoBox = [
     "Auxílios para a vida diária e prática.",
     "Materiais e produtos que favorecem desempenho autônomo e independente em tarefas rotineiras ou facilitam o cuidado de pessoas em situação de dependência de auxílio, nas atividades como se alimentar, cozinhar, vestir-se, tomar banho e executar necessidades pessoais.",
     "Exemplos",
-    "Talheres modificados, suportes para utensílios domésticos, roupas desenhadas para facilitar o vestir e despir, abotoadores, velcro, recursos para transferência, barras de apoio, equipamentos para facilitar o uso do relógio, da calculadora, verificar a temperatura do corpo, identificar se as luzes estão acesas ou apagadas, cozinhar, identificar cores e peças do vestuário, verificar pressão arterial, identificar chamadas telefônicas, escrever, etc."
+    "Talheres modificados, suportes para utensílios domésticos, roupas desenhadas para facilitar o vestir e despir, abotoadores, velcro, recursos para transferência, barras de apoio, equipamentos para facilitar o uso do relógio, da calculadora, verificar a temperatura do corpo, identificar se as luzes estão acesas ou apagadas, cozinhar, identificar cores e peças do vestuário, verificar pressão arterial, identificar chamadas telefônicas, escrever, etc.",
+    "Ícone de garfo e colher com engrossadores."
   ],//0
   [
     "assets/categoria_02.svg",
     "Comunicação Aumentativa e Alternativa (C.A.A.).",
     "Destinada a atender pessoas sem fala ou escrita funcional ou em defasagem entre sua necessidade comunicativa e sua habilidade em falar e/ou escrever.",
     "Exemplos",
-    "Recursos como as pranchas de comunicação, construídas com simbologia gráfica (ARASAAC, SymbolStix, Widgit, BLISS, PCS e outros), letras ou palavras escritas (para expressar desejos, sentimentos, entendimentos), vocalizadores (pranchas com produção de voz) ou o computador com softwares específicos e pranchas dinâmicas em computadores tipo tablets."
+    "Recursos como as pranchas de comunicação, construídas com simbologia gráfica (ARASAAC, SymbolStix, Widgit, BLISS, PCS e outros), letras ou palavras escritas (para expressar desejos, sentimentos, entendimentos), vocalizadores (pranchas com produção de voz) ou o computador com softwares específicos e pranchas dinâmicas em computadores tipo tablets.",
+    "Ícone de um quadro de verificação visual escrito sim."
   ],//1
   [
     "assets/categoria_03.svg",
     "Recursos de acessibilidade ao computador.",
     "Conjunto de hardware e software especialmente idealizado para tornar o computador acessível a pessoas com privações sensoriais (visuais e auditivas), intelectuais e motoras. Inclui dispositivos de entrada (mouses, teclados e acionadores diferenciados) e dispositivos de saída (sons, imagens e informações táteis).",
     "Exemplos",
-    "Recursos de dispositivo de entrada como teclados modificados, os teclados virtuais com varredura, mouses especiais e acionadores diversos, software de reconhecimento de voz, dispositivos apontadores que valorizam movimento de cabeça, movimento de olhos, ondas cerebrais (pensamento), órteses e ponteiras para digitação, entre outros. Como dispositivos de saída podemos citar softwares leitores de tela, software para ajustes de cores e tamanhos das informações (efeito lupa), os softwares leitores de texto impresso (O.C.R.), impressoras braile e linha braile, impressão em relevo, entre outros."
+    "Recursos de dispositivo de entrada como teclados modificados, os teclados virtuais com varredura, mouses especiais e acionadores diversos, software de reconhecimento de voz, dispositivos apontadores que valorizam movimento de cabeça, movimento de olhos, ondas cerebrais (pensamento), órteses e ponteiras para digitação, entre outros. Como dispositivos de saída podemos citar softwares leitores de tela, software para ajustes de cores e tamanhos das informações (efeito lupa), os softwares leitores de texto impresso (O.C.R.), impressoras braile e linha braile, impressão em relevo, entre outros.",
+    "Ícone de uma tecla para computador com escrita em braile."
   ],//2
   [
     "assets/categoria_04.svg",
     "Sistemas de controle de ambiente.",
     "Controles que são programados para realizar funções (apagar ou acender luzes, desligar fogo ou torneira, trancar ou abrir portas, etc.) e promover maior independência.",
     "Exemplos",
-    "Por meio de um controle remoto as pessoas com limitações motoras, podem ligar, desligar e ajustar aparelhos eletroeletrônicos como a luz, o som, televisores, ventiladores, executar a abertura e fechamento de portas e janelas, receber e fazer chamadas telefônicas, acionar sistemas de segurança, entre outros, localizados em seu quarto, sala, escritório, casa e arredores. O controle remoto pode ser acionado de forma direta ou indireta e neste caso, um sistema de varredura é disparado e a seleção do aparelho, bem como a determinação de que seja ativado, se dará por acionadores (localizados em qualquer parte do corpo) que podem ser de pressão, de tração, de sopro, de piscar de olhos, por comando de voz, etc."
+    "Por meio de um controle remoto as pessoas com limitações motoras, podem ligar, desligar e ajustar aparelhos eletroeletrônicos como a luz, o som, televisores, ventiladores, executar a abertura e fechamento de portas e janelas, receber e fazer chamadas telefônicas, acionar sistemas de segurança, entre outros, localizados em seu quarto, sala, escritório, casa e arredores. O controle remoto pode ser acionado de forma direta ou indireta e neste caso, um sistema de varredura é disparado e a seleção do aparelho, bem como a determinação de que seja ativado, se dará por acionadores (localizados em qualquer parte do corpo) que podem ser de pressão, de tração, de sopro, de piscar de olhos, por comando de voz, etc.",
+    "Ícone de uma assistente virtual com inteligência artificial acionada por voz."
   ],//3
   [
     "assets/categoria_05.svg",
     "Projetos arquitetônicos para acessibilidade.",
     "Projetos de edificação e urbanismo que garantem acesso, funcionalidade e mobilidade as pessoas, independentemente de sua condição física e sensorial.",
     "Exemplos",
-    "Adaptações estruturais e reformas na casa ou ambiente de trabalho, por meio de rampas, elevadores, adaptações em banheiros, mobiliário entre outras, que retiram ou reduzem as barreiras físicas."
+    "Adaptações estruturais e reformas na casa ou ambiente de trabalho, por meio de rampas, elevadores, adaptações em banheiros, mobiliário entre outras, que retiram ou reduzem as barreiras físicas.",
+    "Ícone com um pictograma de uma pessoa em cadeira de rodas subindo em uma rampa de acesso."
   ],//4
   [
     "assets/categoria_06.svg",
     "Órteses e próteses.",
     "Próteses são peças artificiais que substituem partes ausentes do corpo. Órteses são colocadas junto a um segmento corpo, garantindo-lhe um melhor posicionamento, estabilização e/ou função.",
     "Exemplos",
-    "São normalmente confeccionadas sob medida e servem no auxílio de mobilidade, de funções manuais (escrita, digitação, utilização de talheres, manejo de objetos para higiene pessoal), correção postural, entre outros."
+    "São normalmente confeccionadas sob medida e servem no auxílio de mobilidade, de funções manuais (escrita, digitação, utilização de talheres, manejo de objetos para higiene pessoal), correção postural, entre outros.",
+    "Ícone de uma prótese de perna."
   ],//5
   [
     "assets/categoria_07.svg",
     "Adequação postural.",
     "Recursos que ajudem os sujeitos a ter uma postura estável e confortável, favorecendo um bom desempenho funcional.",
     "Exemplos",
-    "Cadeira de rodas, poltrona postural, recursos que auxiliam e estabilizam a postura deitada e de pé, almofadas no leito, os estabilizadores ortostáticos, etc."
+    "Cadeira de rodas, poltrona postural, recursos que auxiliam e estabilizam a postura deitada e de pé, almofadas no leito, os estabilizadores ortostáticos, etc.",
+    "Ícone de uma cadeira de rodas."
   ],//6
   [
     "assets/categoria_08.svg",
     "Auxílios de mobilidade.",
     "Recursos utilizados para auxiliar na mobilidade dos sujeitos.",
     "Exemplos",
-    "Bengalas, muletas, andadores, carrinhos, cadeiras de rodas manuais ou elétricas, scooters e qualquer outro veículo, equipamento ou estratégia utilizada na melhoria da mobilidade pessoal."
+    "Bengalas, muletas, andadores, carrinhos, cadeiras de rodas manuais ou elétricas, scooters e qualquer outro veículo, equipamento ou estratégia utilizada na melhoria da mobilidade pessoal.",
+    "Ícone de uma muleta."
   ],//7
   [
     "assets/categoria_09.svg",
     "Auxílios para qualificação da habilidade visual e recursos que ampliam a informação às pessoas com deficiência visual.",
     "Equipamentos que visam à independência das pessoas com deficiência visual na realização de tarefas diárias.  ",
     "Exemplos",
-    "Auxílios ópticos, lentes, lupas manuais e lupas eletrônicas; os softwares ampliadores de tela. Material gráfico com texturas e relevos, mapas e gráficos táteis, software OCR em celulares para identificação de texto informativo, etc."
+    "Auxílios ópticos, lentes, lupas manuais e lupas eletrônicas; os softwares ampliadores de tela. Material gráfico com texturas e relevos, mapas e gráficos táteis, software OCR em celulares para identificação de texto informativo, etc.",
+    "Ícone de uma lupa de aumento."
   ],//8
   [
     "assets/categoria_10.svg",
     "Auxílios para pessoas com deficiência auditiva.",
     "Equipamentos que visam à independência das pessoas com deficiência auditiva na realização das tarefas diárias.",
     "Exemplos",
-    "Equipamentos como infravermelho, FM, aparelhos para surdez, telefones com teclado-teletipo (T.T.Y.), sistemas com alerta táctil-visual, celular com mensagens escritas e chamadas por vibração, software que favorece a comunicação ao telefone celular transformando em voz o texto digitado no celular e em texto a mensagem falada. Livros, textos e dicionários digitais em língua de sinais. Sistema de legendas (close-caption / subtitles)."
+    "Equipamentos como infravermelho, FM, aparelhos para surdez, telefones com teclado-teletipo (T.T.Y.), sistemas com alerta táctil-visual, celular com mensagens escritas e chamadas por vibração, software que favorece a comunicação ao telefone celular transformando em voz o texto digitado no celular e em texto a mensagem falada. Livros, textos e dicionários digitais em língua de sinais. Sistema de legendas (close-caption / subtitles).",
+    "Ícone de um ouvido com aparelho auditivo."
   ],//9
   [
     "assets/categoria_11.svg",
     "Mobilidade e adaptações em veículos. ",
     "São adaptações realizadas em veículos automotores para auxiliar no deslocamento da pessoa com deficiência.",
     "Exemplos",
-    "Acessórios que possibilitam uma pessoa com deficiência física dirigir um automóvel, facilitadores de embarque e desembarque como elevadores para cadeiras de rodas (utilizados nos carros particulares ou de transporte coletivo), rampas para cadeiras de rodas, serviços de autoescola para pessoas com deficiência."
+    "Acessórios que possibilitam uma pessoa com deficiência física dirigir um automóvel, facilitadores de embarque e desembarque como elevadores para cadeiras de rodas (utilizados nos carros particulares ou de transporte coletivo), rampas para cadeiras de rodas, serviços de autoescola para pessoas com deficiência.",
+    "Ícone de um ônibus com rampa de acesso."
   ],//10
   [
     "assets/categoria_12.svg",
     "Esporte e lazer.",
     "Recursos que favorecem a prática de esporte e participação em atividades de lazer.",
     "Exemplos",
-    "Cadeira de rodas para basquete, bola sonora, auxílio para segurar cartas e prótese para escalada no gelo, etc."
+    "Cadeira de rodas para basquete, bola sonora, auxílio para segurar cartas e prótese para escalada no gelo, etc.",
+    "Ícone de uma bola com guizos."
   ]//11
 ];
 
@@ -267,6 +279,7 @@ trocaDeVideo('title-video3')
         });
         
       box.children[0].children[0].children[0].src = infoBox[n][0];
+      box.children[0].children[0].children[0].alt= infoBox[n][5];
       box.children[0].children[1].children[0].innerHTML = `<strong style="text-transform: uppercase;">${infoBox[n][1]}</strong>`;
       box.children[0].children[1].children[1].innerHTML = infoBox[n][2];
       box.children[1].innerHTML = "Exemplos:";
