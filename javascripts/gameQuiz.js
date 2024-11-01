@@ -321,7 +321,7 @@ function createParagrafoErrado(){
 
 function createImageCerto(){
     let im = document.createElement('img');
-    im.src = '../assets/icone_certo.svg';
+    im.src = 'assets/icone_certo.svg';
     im.style.margin = '0 15px';
    
     return im;
@@ -329,7 +329,7 @@ function createImageCerto(){
 
 function createImageErrado(){
     let im = document.createElement('img');
-    im.src = '../assets/icone_errado.svg';
+    im.src = 'assets/icone_errado.svg';
     im.style.margin = '0 15px';
    
     return im;
