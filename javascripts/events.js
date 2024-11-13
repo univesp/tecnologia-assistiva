@@ -347,9 +347,9 @@ trocaDeVideo('title-video3')
     entries.forEach(entry => {
       if (entry.isIntersecting) {  // Verifica se o elemento está visível
         if (entry.target.tagName === 'IMG') { // Verifica se é uma imagem
-          entry.target.classList.add("animate__bounceInRight"); // Animação para imagens
+          entry.target.classList.add("animate__fadeInRight"); // Animação para imagens
         } else {
-          entry.target.classList.add("animate__bounceInLeft"); // Animação para outros elementos
+          entry.target.classList.add("animate__fadeInLeft"); // Animação para outros elementos
         }
         observer.unobserve(entry.target); // Para não adicionar a animação repetidamente
       }

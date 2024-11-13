@@ -70,6 +70,10 @@ h3{
 .animate__animated{
   opacity: 0;
 }
+
+.animate__fadeInRight, .animate__fadeInLeft{
+  animation-duration: .7s !important;
+}
 /*===background color das boxs===comeco===*/
 .bg-color-box1{
   background-color: var(--box1);
